@@ -1,0 +1,36 @@
+{
+    "entries": [
+        {
+            "title": "Odilon",
+            "price": "3000",
+            "currency": "€",
+            "img": "assets/images/wishlist/odilon.jpg",
+            "url": "https://lydia-app.com/pots?id=58584-anniversaire-louis",
+            "id": "odilon-1"
+        },
+        {
+            "title": "Voyage à Paris",
+            "price": "7000",
+            "currency": "€",
+            "img": "https://www.nadame.fr/wp-content/uploads/2020/07/carte-de-remerciement-pour-votre-mariage.jpg",
+            "url": "https://www.corgi.fr/odilon.html",
+            "id": "odilon-2"
+        },
+        {
+            "title": "Fauteuil",
+            "price": "3000",
+            "currency": "€",
+            "img": "https://www.meublesconcept.com/6444-thickbox_default/chaise-barcelona-en-simili-cuir-cire.jpg",
+            "url": "https://www.corgi.fr/odilon.html",
+            "id": "odilon-3"
+        },
+        {
+            "title": "Odilon",
+            "price": "3000",
+            "currency": "€",
+            "img": "assets/images/wishlist/odilon.jpg",
+            "url": "https://www.corgi.fr/odilon.html",
+            "id": "odilon-4"
+        }
+    ]
+}

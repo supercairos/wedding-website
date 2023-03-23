@@ -143,7 +143,8 @@ const wPackConfig = {
                 webRoot: function() {
                     return '.';
                 },
-                config: function(data) {
+                config: function (data) {
+                    console.log(data);
                     return data;
                 },
                 ifEquals: function(arg1, arg2, options) {

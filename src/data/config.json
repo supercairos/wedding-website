@@ -1,6 +1,6 @@
 {
-    "defaultPageTitle": "Alpine | Bootstrap 5 Ecommerce HTML Template",
-    "templateName": "Alpine",
+    "defaultPageTitle": "Mariage de Clarisse & Romain",
+    "templateName": "WeddingNight",
     "classes": {
         "body": "",
         "navbar": "",
@@ -12,7 +12,6 @@
         "navbar": "navbar/navbar",
         "footer": "footer/footer"
     },
-    "defaultImgAlt": "Bootstrap 5 Template by Pixel Rocket",
-    "helpDocsURL": "",
-    "demoURL": ""
+    "defaultImgAlt": "Mariage de Clarisse & Romain",
+    "instagram": "clarisse.romain"
 }

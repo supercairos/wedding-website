@@ -1,7 +1,7 @@
 {
-    "name": "alpine",
+    "name": "wedding",
     "version": "1.0.0",
-    "description": "Bootstrap 5 HTML Template created by Pixel Rocket",
+    "description": "A wedding website",
     "scripts": {
         "start": "webpack-dev-server --open",
         "build": "del-cli dist && webpack"
