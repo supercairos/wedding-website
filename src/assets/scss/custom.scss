@@ -1,0 +1,22 @@
+/* Custom styling that only applies to demo logo. Remove when you replace your with your logo */
+.svg-logo-white {
+    color: $orange;
+}
+.svg-logo-black {
+    color: $gray-900;
+}
+
+.navbar-transparent {
+    .svg-logo-black {
+        color: $white;
+    }   
+}
+
+@font-face {
+    font-family: 'goudy_regular';
+    src: url('../fonts/goudy_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Add your own custom CSS here... */
