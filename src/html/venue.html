@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+{{> head/head }}
+
+<body class="{{ config.classes.body }}">
+    <!-- Navbar -->
+    <div class="position-relative z-index-30">
+        {{> navbar/navbar }}
+    </div>
+    <!-- / Navbar-->
+
+    <!-- Hero Section -->
+    <section class="vh-100 position-relative bg-img-cover bg-pos-center-center"
+        style="background-image: url(http://www.lesbarres.com/blog/wp-content/uploads/2017/06/la_balle_au_bond_la_peniche_au_coucher_du_soleil.jpg);">
+    </section>
+    <!--/ Hero Section-->
+
+    <!-- Image Hotspot Banner-->
+    <section class="position-relative" id="venue">
+        <div class="container">
+            <div class="py-lg-8 d-flex align-items-center" data-aos="fade-left">
+                <div
+                    class="py-8 d-flex justify-content-end align-items-start align-items-lg-end flex-column col-lg-6 text-lg-end">
+                    <p class="small fw-bolder text-uppercase tracking-wider mb-2 text-muted">La Reception</p>
+                    <h2 class="display-5 fw-bold mb-3">La Balle au Bond</h2>
+                    <p class="lead d-none d-lg-block">Une Peniche face au louvre</p>
+                    <a class="text-decoration-none fw-bolder" href="#">Voir la carte &rarr;</a>
+                </div>
+                <div
+                    class="py-8 d-flex justify-content-end align-items-start align-items-lg-end flex-column col-lg-6 text-lg-end">
+                    <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDUNo9sr0gOfJ5ZY14lMx91JJM89RVLcdo&q=La Balle au Bond, Paris, France">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / Image Hotspot Banner-->
+
+    <!-- Footer -->
+    {{> (config config.partials.footer) configClassList=config.classes.footer classList="" }}
+    <!-- / Footer-->
+
+    <!-- Theme JS -->
+    {{> footer/scripts }}
+</body>
+
+</html>

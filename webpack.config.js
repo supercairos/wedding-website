@@ -7,6 +7,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const mergeJSON = require('handlebars-webpack-plugin/utils/mergeJSON');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const RobotsTxtPlugin = require("robotstxt-webpack-plugin");
 
 
 // Project config data.
@@ -40,98 +41,107 @@ const paths = {
 // Main webpack config options.
 const wPackConfig = {
     entry: {
-        'libs':   [paths.src.scss + '/libs.scss'],
-        'theme':     [paths.src.js + '/theme.js', paths.src.scss + '/theme.scss']
-      },
+        'libs': [paths.src.scss + '/libs.scss'],
+        'theme': [paths.src.js + '/theme.js', paths.src.scss + '/theme.scss'],
+        'wishlist': [paths.src.js + '/pages/wishlist.js'],
+    },
     output: {
         filename: paths.dist.js + '/[name].bundle.js',
     },
     devtool: 'source-map',
     mode: 'development',
     target: 'web',
+    resolve: {
+        alias: {
+            'handlebars': 'handlebars/dist/handlebars.js',
+        }
+    },
+    externals: {
+        paypal: 'PayPal'
+    },
     module: {
         rules: [{
             test: /\.(sass|scss|css)$/,
             include: path.resolve(__dirname, paths.src.scss.slice(2)),
             use: [{
-                    loader: MiniCssExtractPlugin.loader,
+                loader: MiniCssExtractPlugin.loader,
+            },
+            {
+                loader: 'css-loader',
+                options: {
+                    url: false,
+                    // sourceMap: true,
                 },
-                {
-                    loader: 'css-loader',
-                    options: {
-                        url: false,
-                        // sourceMap: true,
-                    },
-                },
-                {
-                    loader: 'postcss-loader'
-                },
-                {
-                    loader: 'sass-loader',
-                    // options: {
-                    //     sourceMap: true,
-                    //     sassOptions: {
-                    //         indentWidth: 4,
-                    //         outputStyle: 'expanded',
-                    //         sourceComments: true
-                    //     }
-                    // }
-                },
+            },
+            {
+                loader: 'postcss-loader'
+            },
+            {
+                loader: 'sass-loader',
+                // options: {
+                //     sourceMap: true,
+                //     sassOptions: {
+                //         indentWidth: 4,
+                //         outputStyle: 'expanded',
+                //         sourceComments: true
+                //     }
+                // }
+            },
             ],
-        }, ]
+        },]
     },
     optimization: {
         splitChunks: {
-          cacheGroups: {
-            vendor: {
-              test:   /[\\/](node_modules)[\\/].+\.js$/,
-              name:   'vendor',
-              chunks: 'all'
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/](node_modules)[\\/].+\.js$/,
+                    name: 'vendor',
+                    chunks: 'all'
+                }
             }
-          }
         },
         minimizer: [
-          // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
-          // `...`,
-          new CssMinimizerPlugin(),
-          new TerserPlugin({
-            extractComments: false,
-            terserOptions: {
-              output: {
-                comments: false,
-              },
-            },
-          }),
+            // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+            // `...`,
+            new CssMinimizerPlugin(),
+            new TerserPlugin({
+                extractComments: false,
+                terserOptions: {
+                    output: {
+                        comments: false,
+                    },
+                },
+            }),
         ],
-      },
+    },
     plugins: [
         new webpack.ProgressPlugin(),
         new CopyPlugin({
             patterns: [{
-                    from: paths.src.fonts,
-                    to: paths.dist.fonts,
-                    noErrorOnMissing: true
-                },
-                {
-                    from: paths.src.imgs,
-                    to: paths.dist.imgs,
-                    noErrorOnMissing: true
-                },
-                {
-                    from: paths.src.favicon,
-                    to: paths.dist.favicon,
-                    noErrorOnMissing: true
-                },
-                {
-                    from: paths.src.svgs,
-                    to: paths.dist.svgs,
-                    noErrorOnMissing: true
-                },
-                {
-                    from: paths.src.video,
-                    to: paths.dist.video,
-                    noErrorOnMissing: true
-                }
+                from: paths.src.fonts,
+                to: paths.dist.fonts,
+                noErrorOnMissing: true
+            },
+            {
+                from: paths.src.imgs,
+                to: paths.dist.imgs,
+                noErrorOnMissing: true
+            },
+            {
+                from: paths.src.favicon,
+                to: paths.dist.favicon,
+                noErrorOnMissing: true
+            },
+            {
+                from: paths.src.svgs,
+                to: paths.dist.svgs,
+                noErrorOnMissing: true
+            },
+            {
+                from: paths.src.video,
+                to: paths.dist.video,
+                noErrorOnMissing: true
+            }
             ],
         }),
         new HandlebarsPlugin({
@@ -140,25 +150,31 @@ const wPackConfig = {
             partials: [path.join(process.cwd(), 'src', 'partials', '**', '*.{html,svg}')],
             data: projectData,
             helpers: {
-                webRoot: function() {
+                webRoot: function () {
                     return '.';
                 },
                 config: function (data) {
-                    console.log(data);
                     return data;
                 },
-                ifEquals: function(arg1, arg2, options) {
+                ifEquals: function (arg1, arg2, options) {
                     if (arg1 === arg2) {
                         return options.fn(this);
                     }
                     return options.inverse(this);
                 },
-                log: function(data) {
+                log: function (data) {
                     console.log(data);
                 },
-                limit: function(arr, limit) {
-                  if (!Array.isArray(arr)) { return []; }
-                  return arr.slice(0, limit);
+                limit: function (arr, limit) {
+                    if (!Array.isArray(arr)) { return []; }
+                    return arr.slice(0, limit);
+                },
+                deadline: function (date) {
+                    const deadline = new Date(date);
+                    const today = new Date();
+                    const diff = deadline.getTime() - today.getTime();
+                    const days = Math.ceil(diff / (1000 * 3600 * 24));
+                    return days;
                 }
             },
             // onBeforeSave: function(Handlebars, res, file) {
@@ -169,6 +185,14 @@ const wPackConfig = {
         new RemoveEmptyScriptsPlugin(),
         new MiniCssExtractPlugin({
             filename: paths.dist.css + '/[name].bundle.css',
+        }),
+        new RobotsTxtPlugin({
+            policy: [
+                {
+                    userAgent: '*',
+                    disallow: '/',
+                }
+            ],
         }),
     ]
 };

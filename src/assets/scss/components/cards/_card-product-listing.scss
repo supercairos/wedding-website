@@ -1,4 +1,3 @@
-
 .card-listing .card-actions {
     position: absolute;
     z-index: 20;
@@ -6,7 +5,7 @@
     left: 0;
     right: 0;
     padding: .75rem;
-    background: rgba(255,255,255, .8);
+    background: rgba(255, 255, 255, .8);
     transform: translateY(100%);
 }
 
@@ -24,9 +23,6 @@
     }
 
     &:hover {
-        .card-header {
-            border: 2px dashed $gray-900;
-        }
         .card-actions {
             opacity: 1;
             transform: translateY(0);

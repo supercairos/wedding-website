@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+{{> head/head }}
+
+<body class="{{ config.classes.body }}">
+    <!-- Navbar -->
+    <div class="position-relative z-index-30">
+        {{> navbar/navbar }}
+    </div>
+    <!-- / Navbar-->
+
+    <!-- Hero Section -->
+    <section class="vh-100 position-relative bg-img-cover bg-pos-center-center"
+        style="background-image: url(http://www.lesbarres.com/blog/wp-content/uploads/2017/06/la_balle_au_bond_la_peniche_au_coucher_du_soleil.jpg);">
+    </section>
+    <!--/ Hero Section-->
+
+    <!-- Staff Picks-->
+    <section class="position-relative mt-8" data-aos="fade-up" id="wishlist">
+        <div class="container">
+            <div class="w-md-50 mb-5">
+                <p class="small fw-bolder text-uppercase tracking-wider mb-2 text-muted">Nos envies</p>
+                <h2 class="display-5 fw-bold mb-3">Liste de Mariage</h2>
+                <p class="lead">We've sorted through our feed to put together a collection of our products perfect
+                    for a summer outdoors.</p>
+            </div>
+            {{> swiper/wishlist-carousel-scrollbar }}
+        </div>
+    </section>
+    <!-- / Staff Picks-->
+
+    <!-- Footer -->
+    {{> footer/footer }}
+    <!-- / Footer-->
+
+    <!-- Theme JS -->
+    {{> footer/scripts }}
+    <!-- Wishlist JS -->
+    <script src="./assets/js/wishlist.bundle.js"></script>
+
+    <script id="item-card-template" type="text/template">
+        {{> wishlist/item-card }}
+    </script>
+</body>
+
+</html>

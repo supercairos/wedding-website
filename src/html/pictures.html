@@ -33,12 +33,36 @@
         </section>
         <!--/ Hero Section-->
 
+        <!-- Instagram Display-->
+        <section class="position-relative mt-8" id="instagram-photos">
+            <div class="container">
+                <div class="w-md-50 mb-5">
+                    <p class="small fw-bolder text-uppercase tracking-wider mb-2 text-muted">Nos aventures</p>
+                    <h2 class="display-5 fw-bold mb-3">Nos plus belles photos</h2>
+                    <p class="lead">Quelques une de nos aventures à deux</p>
+                </div>
+                {{> instagram/instagram }}
+            </div>
+        </section>
+        <!-- Instagram Display-->
+
         <!-- /Page Content -->
     </section>
     <!-- / Main Section-->
 
+    <!-- Footer -->
+    {{> (config config.partials.footer)
+    configClassList=config.classes.footer
+    classList=""
+    }}
+    <!-- / Footer-->
+
     <!-- Theme JS -->
     {{> footer/scripts }}
+
+    <script id="item-card-template" type="text/template">
+            {{> wishlist/item-card }}
+    </script>
 </body>
 
 </html>

@@ -1,19 +1,20 @@
-.svg-fill-color {
-    fill: $blue;
+.svg-logo-fill-color {
+    fill: $white;
 }
 
-.svg-stroke-color {
+.svg-logo-stroke-color {
     fill: none;
-    stroke: $blue;
+    stroke: $white;
 }
 
-.navbar-transparent {
-    .svg-fill-color {
-        color: $white;
+.navbar-transparent:hover {
+    .svg-logo-fill-color {
+        fill: $blue;
     }
 
-    .svg-stroke-color {
-        color: $white;
+    .svg-logo-stroke-color {
+        fill: none;
+        stroke: $blue;
     }
 }
 
@@ -25,6 +26,10 @@
     width: 100%;
     max-height: 250px;
     margin-bottom: 1rem;
+}
+
+.item-sold-out img {
+    filter: grayscale(100%);
 }
 
 @font-face {
