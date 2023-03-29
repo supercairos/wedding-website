@@ -4,6 +4,8 @@ import PayPal from 'paypal';
 import Axios from 'axios';
 
 const BASE_URL = 'https://wedding-backend-a3ooop2qhq-od.a.run.app';
+const PAYPAL_BUTTON_ID = 'SG6MGCRSJQ9CW';
+const PAYPAL_ENV = 'sandbox';
 
 (function () {
     // Add a body class once page has loaded
@@ -40,8 +42,8 @@ const BASE_URL = 'https://wedding-backend-a3ooop2qhq-od.a.run.app';
 
         let onPaypalClick = (item) => () => {
             PayPal.Donation.Checkout({
-                env: 'sandbox',
-                hosted_button_id: 'SG6MGCRSJQ9CW',
+                env: PAYPAL_ENV,
+                hosted_button_id: PAYPAL_BUTTON_ID,
                 onComplete: onPaypalComplete(item),
             }).renderTo(window.parent);
         }
@@ -54,15 +56,20 @@ const BASE_URL = 'https://wedding-backend-a3ooop2qhq-od.a.run.app';
 
                 // Loop through the items
                 data.forEach((item) => {
+                    const soldout = item.raised >= item.price;
                     // Compile the template
                     const html = itemCardTemplate({
-                        is_sold_out: item.raised >= item.price,
+                        soldout,
                         ...item
                     });
 
                     // Create a div element
                     var div = document.createElement('div');
-                    div.addEventListener('click', onPaypalClick(item));
+                    if (soldout) {
+                        div.classList.add('item-sold-out');
+                    } else {
+                        div.addEventListener('click', onPaypalClick(item));
+                    }
                     div.classList.add('swiper-slide', 'd-flex', 'h-auto');
                     div.id = `wishlist-item-${item.id}`;
                     div.innerHTML += html;

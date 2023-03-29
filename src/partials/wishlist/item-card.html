@@ -1,5 +1,5 @@
 <!-- Card Product-->
-<div class="card card-listing hover-trigger \{{#if is_sold_out }}item-sold-out\{{/if}}" data-id="\{{ id }}">
+<div class="card card-listing hover-trigger" data-id="\{{ id }}">
     <div class="card-header">
         <picture class="overflow-hidden d-block bg-light" style="height: 280px">
             <img class="img-fluid w-100 h-100 z-index-10" title="" src="\{{ picture_url }}"
@@ -11,7 +11,7 @@
                 alt="{{config.defaultImgAlt}}">
         </picture>
         \{{/if}}
-        \{{#unless is_sold_out }}
+        \{{#unless soldout }}
         <div class="card-actions">
             <span class="small text-uppercase tracking-wide fw-bolder text-center d-block">Participer</span>
         </div>
@@ -19,7 +19,7 @@
     </div>
     <div class="card-body px-0 text-center">
         <a class="mb-0 mx-2 mx-md-4 fs-p link-cover text-decoration-none d-block text-center">\{{ name }}</a>
-        \{{#if is_sold_out }}
+        \{{#if soldout }}
         <p class="fw-bolder m-0 mt-2">Épuisé</p>
         \{{else}}
         <p class="fw-bolder m-0 mt-2">\{{ raised }} / \{{ price }}€</p>

@@ -28,4 +28,12 @@
             transform: translateY(0);
         }
     }
+
+    cursor: pointer;
+}
+
+.item-sold-out {
+    .card-listing {
+        cursor: auto;
+    }
 }
