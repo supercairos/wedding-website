@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+{{> head/head }}
+
+<body class="{{ config.classes.body }}">
+    <!-- Navbar -->
+    <div class="position-relative z-index-30">
+        {{> navbar/navbar }}
+    </div>
+    <!-- / Navbar-->
+
+    <!-- Hero Section -->
+    <section class="vh-75 position-relative bg-img-cover bg-pos-center-center"
+        style="background-image: url(http://www.lesbarres.com/blog/wp-content/uploads/2017/06/la_balle_au_bond_la_peniche_au_coucher_du_soleil.jpg);">
+    </section>
+    <!--/ Hero Section-->
+
+    <!-- Image Hotspot Banner-->
+    <section class="position-relative" id="venue">
+        <div class="container">
+            <h1 class="py-6 display-3 text-center fw-bold ">Nous contacter</h1>
+            <div class="row align-items-center">
+                <div class="col-lg-5 pb-6 px-lg-6">
+                    <p class="d-block">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, natus hic. Atque, dolorem!
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <p class="d-block text-center">
+                                Jade Basset<br />
+                                +33 6 12 34 56 78
+                            </p>
+                        </div>
+                        <div class="col">
+                            <p class="d-block text-center">
+                                Jade Basset<br />
+                                +33 6 12 34 56 78
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <form id="contact-form" action="/" method="post">
+                        <div class="alert alert-success mb-3" id="contact-success" style="display: none;" role="alert">
+                            Votre message a bien été envoyé.
+                        </div>
+                        <div class="alert alert-danger mb-3" id="contact-error" style="display: none;" role="alert">
+                            Il y a eu une erreur lors de l'envoi du formulaire.
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact-name" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="contact-name" placeholder="Gabriel Dupont"
+                                name="from.name" minlength="1" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact-email" class="form-label">Addresse email</label>
+                            <input type="email" class="form-control" id="contact-email"
+                                placeholder="gabriel.dupont@gmail.com" name="from.email" minlength="1" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact-subject" class="form-label">Sujet</label>
+                            <select class="form-select" id="contact-subject" name="subject">
+                                <option selected value="">Choisir un sujet</option>
+                                <option value="Logement">Le logement</option>
+                                <option value="RSVP">Je serais la</option>
+                                <option value="Alimentaires">Restriction alimentaires</option>
+                                <option value="Autre">Autres requetes</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact-message" class="form-label">Message</label>
+                            <textarea class="form-control" id="contact-message" rows="5" name="body"
+                                minlength="1"></textarea>
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="Envoyer" id="contact-submit" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / Staff Picks-->
+
+    <!-- Footer -->
+    {{> footer/footer }}
+    <!-- / Footer-->
+
+    <!-- Theme JS -->
+    {{> footer/scripts }}
+    <!-- Wishlist JS -->
+    <script src="./assets/js/contact.bundle.js"></script>
+</body>
+
+</html>

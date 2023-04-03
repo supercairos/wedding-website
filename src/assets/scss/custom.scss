@@ -7,7 +7,21 @@
     stroke: $white;
 }
 
-.navbar-transparent:hover {
+// .navbar-transparent:hover {
+//     .svg-logo-fill-color {
+//         fill: $blue;
+//     }
+
+//     .svg-logo-stroke-color {
+//         fill: none;
+//         stroke: $blue;
+//     }
+// }
+
+#logo-index-svg {
+    width: 40%;
+    height: 40%;
+
     .svg-logo-fill-color {
         fill: $blue;
     }

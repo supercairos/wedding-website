@@ -13,6 +13,7 @@ import './components/simplebar';
 import './components/swiper';
 import './components/tooltip';
 import './components/paypal';
+import './components/maps';
 
 // theme misc js
 import './misc';
