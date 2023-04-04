@@ -3,7 +3,8 @@ import Swiper from 'swiper';
 import PayPal from 'paypal';
 import Axios from 'axios';
 
-const BASE_URL = 'https://wedding-backend-a3ooop2qhq-od.a.run.app';
+import { BASE_URL } from '../constants';
+
 const PAYPAL_BUTTON_ID = 'SG6MGCRSJQ9CW';
 const PAYPAL_ENV = 'sandbox';
 
@@ -70,42 +71,13 @@ const PAYPAL_ENV = 'sandbox';
                     } else {
                         div.addEventListener('click', onPaypalClick(item));
                     }
-                    div.classList.add('swiper-slide', 'd-flex', 'h-auto');
+                    div.classList.add('col');
                     div.id = `wishlist-item-${item.id}`;
                     div.innerHTML += html;
 
                     // Append the div element to the wrapper
                     wishlistWrapper.appendChild(div);
                 });
-
-                // Initialize the swiper
-                var swiper = new Swiper(this.document.getElementById("wishlist-carousel-scrollbar"), {
-                    spaceBetween: 25,
-                    autoHeight: true, //enable auto height
-                    cssMode: true,
-                    roundLengths: true,
-                    scrollbar: {
-                        el: ".swiper-scrollbar",
-                        hide: false,
-                        draggable: true
-                    },
-                    navigation: {
-                        "nextEl": ".swiper-next",
-                        "prevEl": ".swiper-prev"
-                    },
-                    breakpoints: {
-                        576: {
-                            "slidesPerView": 1
-                        },
-                        768: {
-                            "slidesPerView": 2
-                        },
-                        992: {
-                            "slidesPerView": 3
-                        }
-                    }
-                });
-
             })
             .catch((err) => {
                 console.log(err);

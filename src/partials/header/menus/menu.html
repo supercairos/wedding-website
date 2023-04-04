@@ -1,27 +1,11 @@
 <ul class="navbar-nav py-lg-2 mx-auto">
+
+    {{#each navbar }}
     <li class="nav-item me-lg-4 position-static">
-        <a class="nav-link fw-normal fs-5 py-lg-4" href="index.html">
-            Accueil
+        <a class="nav-link {{#ifEquals this.id ../page }}nav-link-selected{{/ifEquals}} fs-5 py-lg-4"
+            href="{{ this.href }}">
+            {{ this.text }}
         </a>
     </li>
-    <li class="nav-item me-lg-4 position-static">
-        <a class="nav-link fw-normal fs-5 py-lg-4" href="venue.html">
-            Reception
-        </a>
-    </li>
-    <li class="nav-item me-lg-4">
-        <a class="nav-link fw-normal fs-5 py-lg-4" href="contact.html">
-            Nous contacter
-        </a>
-    </li>
-    <!-- <li class="nav-item me-lg-4">
-        <a class="nav-link fw-bolder py-lg-4" href="pictures.html">
-            Photos
-        </a>
-    </li> -->
-    <li class="nav-item me-lg-4">
-        <a class="nav-link fw-normal fs-5 py-lg-4" href="wishlist.html">
-            Liste de Mariage
-        </a>
-    </li>
+    {{/each}}
 </ul>

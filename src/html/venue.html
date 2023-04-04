@@ -2,12 +2,12 @@
 <html lang="en">
 
 <!-- Head -->
-{{> head/head }}
+{{> head/head title="Lieux - Mariage Clarisse & Romain" }}
 
 <body class="{{ config.classes.body }}">
     <!-- Navbar -->
     <div class="position-relative z-index-30">
-        {{> navbar/navbar }}
+        {{> navbar/navbar page="venue" }}
     </div>
     <!-- / Navbar-->
 
@@ -23,7 +23,7 @@
             <h1 class="py-6 display-3 text-center fw-bold ">La Balle au Bond</h1>
             <div class="my-4 d-flex align-items-center" data-aos="fade-left">
                 <div
-                    class="py-5 pe-5 d-flex justify-content-end align-items-start align-items-end flex-column col-6 text-end">
+                    class="py-5 pe-5 d-flex justify-content-end align-items-start align-items-end flex-column col-lg-6 text-end">
                     <p class="d-block justify-content-center">
                         Prom. Marceline Loridan-Ivens,<br />
                         75006, Paris<br />
@@ -31,7 +31,7 @@
                     </p>
                     <a class="fw-bolder" href="https://goo.gl/maps/5TM96mkmsDiF8isi7">Voir la carte</a>
                 </div>
-                <div class="vh-50 d-flex flex-column col-6" id="map">
+                <div class="vh-50 d-flex flex-column col-lg-6" id="map">
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
     <!-- / Image Hotspot Banner-->
 
     <!-- Footer -->
-    {{> (config config.partials.footer) configClassList=config.classes.footer classList="" }}
+    {{> footer/footer }}
     <!-- / Footer-->
 
     <!-- Theme JS -->

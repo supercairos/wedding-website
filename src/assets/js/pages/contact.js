@@ -1,6 +1,6 @@
 import Axios from 'axios';
 
-const BASE_URL = 'https://wedding-backend-a3ooop2qhq-od.a.run.app';
+import { BASE_URL } from '../constants';
 
 (function () {
     // Add a body class once page has loaded

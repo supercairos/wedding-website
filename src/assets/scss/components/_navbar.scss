@@ -19,7 +19,8 @@
     }
 }
 
-.navbar-nav a:active, .navbar-nav a:focus {
+.navbar-nav a:active,
+.navbar-nav a:focus {
     background: transparent;
 }
 
@@ -32,14 +33,23 @@
 * So if we have a transparent background that shows as white on hover, ensure links are changed to black.
 * and vice-versa for transparent to black background */
 .navbar-dark.bg-white-hover:hover {
-    .navbar-collapse:not(.show) .nav-link, .navbar-brand, .btn-link, .navbar-collapse:not(.show) .btn-link {
+
+    .navbar-collapse:not(.show) .nav-link,
+    .navbar-brand,
+    .btn-link,
+    .navbar-collapse:not(.show) .btn-link {
         color: $body-color;
     }
 }
+
 .navbar-light.bg-dark-hover:hover {
-    .navbar-collapse:not(.show) .nav-link, .navbar-brand, .btn-link, .navbar-collapse:not(.show) .btn-link {
+
+    .navbar-collapse:not(.show) .nav-link,
+    .navbar-brand,
+    .btn-link,
+    .navbar-collapse:not(.show) .btn-link {
         color: $white;
-    }  
+    }
 }
 
 /* adjust nav-link to better center items */
@@ -47,6 +57,11 @@
     align-items: center;
     display: flex;
     font-weight: 500;
+}
+
+.nav-link-selected {
+    text-decoration: underline;
+    font-weight: 900;
 }
 
 
@@ -59,14 +74,15 @@
     width: 100%;
 }
 
-@include media-breakpoint-up(lg) { 
+@include media-breakpoint-up(lg) {
     .navbar-collapse:not(.show) {
         display: flex !important;
     }
 }
 
 /* handle navbar styling for smaller devices */
-@include media-breakpoint-down(lg) { 
+@include media-breakpoint-down(lg) {
+
     /* body class to hide overflow if navbar is active */
     .navbar-active {
         overflow: hidden;
@@ -90,6 +106,7 @@
         overflow-y: scroll;
         transition: all ease-in .3s;
     }
+
     .navbar-collapse-light {
         background: $white !important;
 
@@ -97,9 +114,11 @@
             color: $body-color !important;
         }
     }
+
     .navbar-collapse.show {
         opacity: 1;
     }
+
     .navbar-collapse.show:not(.navbar-collapse-expand) {
         animation: fadeInUp .3s;
     }
@@ -136,9 +155,12 @@
 }
 
 /* add css transition only once page has loaded to avoid content shift */
-.nav-link, .navbar-brand {
+.nav-link,
+.navbar-brand {
     transition: none;
 }
-.page-loaded .nav-link, .page-loaded .navbar-brand {
+
+.page-loaded .nav-link,
+.page-loaded .navbar-brand {
     transition: all ease-in .15s;
 }

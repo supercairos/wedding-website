@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://wedding-backend-a3ooop2qhq-od.a.run.app';

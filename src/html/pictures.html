@@ -2,13 +2,13 @@
 <html lang="en">
 
 <!-- Head -->
-{{> head/head }}
+{{> head/head title="Photos - Mariage Clarisse & Romain" }}
 
 <body class="{{ config.classes.body }}">
 
     <!-- Navbar -->
     <div class="position-relative z-index-30">
-        {{> navbar/navbar }}
+        {{> navbar/navbar page="pictures" }}
     </div>
     <!-- / Navbar-->
 
@@ -51,10 +51,7 @@
     <!-- / Main Section-->
 
     <!-- Footer -->
-    {{> (config config.partials.footer)
-    configClassList=config.classes.footer
-    classList=""
-    }}
+    {{> footer/footer }}
     <!-- / Footer-->
 
     <!-- Theme JS -->

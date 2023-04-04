@@ -2,12 +2,12 @@
 <html lang="en">
 
 <!-- Head -->
-{{> head/head }}
+{{> head/head title="Liste de Mariage - Mariage Clarisse & Romain" }}
 
 <body class="{{ config.classes.body }}">
     <!-- Navbar -->
     <div class="position-relative z-index-30">
-        {{> navbar/navbar }}
+        {{> navbar/navbar page="wishlist" }}
     </div>
     <!-- / Navbar-->
 
@@ -27,7 +27,7 @@
                     Sapiente corrupti aperiam accusamus necessitatibus quod atque minus in consequatur! Incidunt veniam
                     quia perferendis quisquam nam veritatis? Consequuntur?</p>
             </div>
-            {{> swiper/wishlist-carousel-scrollbar }}
+            {{> wishlist/wishlist-wrapper }}
         </div>
     </section>
     <!-- / Staff Picks-->
