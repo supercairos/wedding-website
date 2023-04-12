@@ -1,22 +1,22 @@
 [
     {
-        "id": "index",
-        "href": "index.html",
+        "id": "home",
+        "href": "home.html",
         "text": "Home"
-    },
-    {
-        "id": "contact",
-        "href": "contact.html",
-        "text": "Nous contacter"
     },
     {
         "id": "venue",
         "href": "venue.html",
-        "text": "La reception"
+        "text": "Les lieux du mariage"
     },
     {
         "id": "wishlist",
         "href": "wishlist.html",
         "text": "La liste de mariage"
+    },
+    {
+        "id": "contact",
+        "href": "contact.html",
+        "text": "Nous contacter"
     }
 ]

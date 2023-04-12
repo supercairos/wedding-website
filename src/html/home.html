@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+{{> head/head title="Accueil - Mariage Clarisse & Romain" }}
+
+<body class="{{ config.classes.body }}" style="overflow-y:hidden;">
+
+    <!-- Navbar -->
+    <div class="position-relative z-index-30">
+        {{> navbar/navbar page="index" }}
+    </div>
+    <!-- / Navbar-->
+
+    <!-- Main Section-->
+    <section class="mt-0 {{ config.classes.content }}">
+        <!-- Hero Section -->
+        <section class="vh-100 position-relative bg-white">
+            <div class="container d-flex h-100 justify-content-center align-items-center position-relative z-index-10">
+                <div
+                    class="d-flex justify-content-center flex-column align-items-center h-100 position-relative z-index-10 text-primary">
+                    <div class="mb-4 mt-10" id="logo-index-svg" data-aos="fade-up">
+                        {{> svg/bouee positionClass="position-absolute top-0 start-0" }}
+                    </div>
+                    <h1 class="display-1 px-2 px-md-5 text-center mx-auto" data-aos="fade-up" data-aos-delay="300">
+                        Clarisse &amp; Romain
+                    </h1>
+                    <h2 class="display-5 px-2 px-md-5 text-center mx-auto" data-aos="fade-up" data-aos-delay="300">
+                        07/10/2023<br />
+                        J&ndash;{{deadline "10/07/2023" }}
+                    </h2>
+                </div>
+            </div>
+        </section>
+        <!--/ Hero Section-->
+
+        <!-- /Page Content -->
+    </section>
+    <!-- / Main Section-->
+
+    <!-- Theme JS -->
+    {{> footer/scripts }}
+</body>
+
+</html>

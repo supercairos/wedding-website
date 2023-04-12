@@ -27,7 +27,9 @@ const PAYPAL_ENV = 'sandbox';
 
             // Update the UI
             const htmlItem = document.getElementById(`wishlist-item-${item.id}`);
-            htmlItem.innerHTML = itemCardTemplate(item);
+
+            const soldout = item.raised >= item.price;
+            htmlItem.innerHTML = itemCardTemplate({ soldout, item });
 
             // Update the database
             Axios.post(`${BASE_URL}/items/${item.id}/transactions`, {
@@ -43,8 +45,8 @@ const PAYPAL_ENV = 'sandbox';
 
         let onPaypalClick = (item) => () => {
             PayPal.Donation.Checkout({
-                env: PAYPAL_ENV,
-                hosted_button_id: PAYPAL_BUTTON_ID,
+                env: item.paypal_env,
+                hosted_button_id: item.paypal_id,
                 onComplete: onPaypalComplete(item),
             }).renderTo(window.parent);
         }

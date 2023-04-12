@@ -45,6 +45,7 @@ const wPackConfig = {
         'theme': [paths.src.js + '/theme.js', paths.src.scss + '/theme.scss'],
         'wishlist': [paths.src.js + '/pages/wishlist.js'],
         'contact': [paths.src.js + '/pages/contact.js'],
+        'password': [paths.src.js + '/pages/password.js'],
     },
     output: {
         filename: paths.dist.js + '/[name].bundle.js',
