@@ -8,6 +8,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const mergeJSON = require('handlebars-webpack-plugin/utils/mergeJSON');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const RobotsTxtPlugin = require("robotstxt-webpack-plugin");
+const CnameWebpackPlugin = require('cname-webpack-plugin');
 
 
 // Project config data.
@@ -195,6 +196,9 @@ const wPackConfig = {
                     disallow: '/',
                 }
             ],
+        }),
+        new CnameWebpackPlugin({
+            domain: 'clarisseetromain.fr',
         }),
     ]
 };
