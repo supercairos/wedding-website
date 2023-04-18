@@ -50,29 +50,8 @@
                             Il y a eu une erreur lors de l'envoi du formulaire.
                         </div>
                         <div class="mb-3">
-                            <label for="contact-name" class="form-label">Nom</label>
-                            <input type="text" class="form-control" id="contact-name" placeholder="Gabriel Dupont"
-                                name="from.name" minlength="1" />
-                        </div>
-                        <div class="mb-3">
-                            <label for="contact-email" class="form-label">Addresse email</label>
-                            <input type="email" class="form-control" id="contact-email"
-                                placeholder="gabriel.dupont@gmail.com" name="from.email" minlength="1" />
-                        </div>
-                        <div class="mb-3">
-                            <label for="contact-subject" class="form-label">Sujet</label>
-                            <select class="form-select" id="contact-subject" name="subject">
-                                <option selected value="">Choisir un sujet</option>
-                                <option value="Logement">Le logement</option>
-                                <option value="RSVP">Je serais la</option>
-                                <option value="Alimentaires">Restriction alimentaires</option>
-                                <option value="Autre">Autres requetes</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="contact-message" class="form-label">Message</label>
-                            <textarea class="form-control" id="contact-message" rows="5" name="body"
-                                minlength="1"></textarea>
+                            <textarea class="form-control" id="contact-message" rows="9" name="body"
+                                minlength="1" placeholder="Envoyez nous un petit message !"></textarea>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Envoyer" id="contact-submit" />
                     </form>
