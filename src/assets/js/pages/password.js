@@ -16,23 +16,23 @@ const VALID_PASSWORDS = [
     // Add a body class once page has loaded
     // Used to add CSS transitions to elems
     // and avoids content shifting during page load
-    window.addEventListener('load', function () {
+    window.addEventListener('load', () => {
         const input = document.getElementById('input-password');
         const button = document.getElementById('button-password');
-        input.addEventListener('keydown', function (e) {
+        input.addEventListener('keydown', (e) => {
             if (['Enter', 'NumpadEnter'].includes(e.key)) {
                 e.preventDefault();
                 button.click();
             }
         });
-        button.addEventListener('click', function (e) {
+        button.addEventListener('click', (e) => {
             e.preventDefault();
             if (VALID_PASSWORDS.includes(sha256(SALT + input.value).toString())) {
                 window.location.href = 'home.html';
                 return;
             }
 
-            alert('Incorrect password');
+            alert('Le mot de passe est incorrect. Veuillez réessayer.');
         });
     });
 })();
