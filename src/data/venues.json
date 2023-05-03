@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Eglise Saint-Germain-des-Prés",
+        "time": "14h30",
+        "subtitle": "Messe",
+        "address": "3 Place Saint-Germain-des-Prés<br />75006 Paris<br />",
+        "picture": "https://www.pariszigzag.fr/wp-content/uploads/2017/01/saint-germain-des-pres-paris-zigzag.jpg",
+        "map_url": "https://goo.gl/maps/YdaEJVNcrYhAL3Vt5",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+        "title": "La Balle au Bond",
+        "time": "17h30",
+        "subtitle": "Cocktail",
+        "address": "Promenade Marceline Loridan-Ivens<br />75006 Paris<br />",
+        "picture": "http://www.lesbarres.com/blog/wp-content/uploads/2017/06/la_balle_au_bond_la_peniche_au_coucher_du_soleil.jpg",
+        "map_url": "https://goo.gl/maps/5TM96mkmsDiF8isi7",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    {
+        "title": "Bois-Colombes",
+        "time": "12h30",
+        "subtitle": "Brunch",
+        "address": "Chez Marie Carlier<br />3 Rue Jean Brunet<br />92270 Bois-Colombes<br />",
+        "picture": "",
+        "map_url": "https://goo.gl/maps/jyvq7JHXhc9jk3dF8",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+]

@@ -12,58 +12,32 @@
     <!-- / Navbar-->
 
     <!-- Hero Section -->
-    <section class="vh-75 position-relative bg-img-cover bg-pos-center-center"
-        style="background-image: url(http://www.lesbarres.com/blog/wp-content/uploads/2017/06/la_balle_au_bond_la_peniche_au_coucher_du_soleil.jpg);">
+    <section class="vh-75 bg-primary position-relative bg-img-cover bg-pos-center-center"
+        style="background-image: url(./assets/svgs/paris2.svg);">
     </section>
     <!--/ Hero Section-->
 
 
     <!-- Image Hotspot Banner-->
     <section class="position-relative" id="boat-venue">
-        <h1 class="py-6 display-3 text-center fw-bold ">Les lieux</h1>
+        <h1 class="py-6 display-3 text-center fw-bold ">Les lieux du mariage</h1>
         <div class="container">
-            <div class="my-8 row" data-aos="fade-left">
-                <div class="py-5 ps-5 d-flex flex-column col-12 col-lg-6 align-self-center text-center text-lg-end">
-                    <h2 class="display-5 fw-bold mb-3">Eglise Saint Germain des Près</h2>
-                    <p class="d-block">
-                        3 Pl. Saint-Germain des Prés,<br />
-                        75006 Paris,<br />
-                        France
-                    </p>
-                    <a class="fw-bolder" href="https://goo.gl/maps/5TM96mkmsDiF8isi7">Voir la carte</a>
+            {{#each venues }}
+            <div class="mb-2 row" data-aos="fade-left">
+                <div class="d-flex flex-column col-12 col-lg-1 text-lg-center">
+                    <h3>{{ this.time }}</h3>
+                    <h4>{{ this.subtitle }}</h4>
+                    <div class="dotted"></div>
                 </div>
-                <div class="vh-50 col-12 col-lg-6" id="church-map"></div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="my-8 row" data-aos="fade-left">
-                <div class="py-5 ps-5 d-flex flex-column col-12 col-lg-6 order-1 order-lg-2 text-lg-start">
-                    <h2 class="display-5 fw-bold mb-3">La Balle au Bond</h2>
-                    <p class="d-block justify-content-center">
-                        Prom. Marceline Loridan-Ivens,<br />
-                        75006, Paris,<br />
-                        France
-                    </p>
-                    <a class="fw-bolder" href="https://goo.gl/maps/5TM96mkmsDiF8isi7">Voir la carte</a>
+                <div class="d-flex flex-column col-12 col-lg-5 text-lg-end mb-8">
+                    <h2 class="display-6 mb-3">{{ this.title }}</h2>
+                    <p class="d-block justify-content-center">{{{ this.address }}}</p>
+                    <a class="fw-bolder" href={{ this.map_url }}>Voir la carte</a>
+                    <p class="d-block justify-content-center pt-3">{{{ this.description }}}</p>
                 </div>
-                <div class="vh-50 col-12 col-lg-6 order-2 order-lg-1" id="boat-map"></div>
+                <img class="ratio-4x3 col-12 col-lg-6 mb-8" src={{ this.picture }} data-zoomable />
             </div>
-        </div>
-
-        <div class="container">
-            <div class="my-8 row" data-aos="fade-left">
-                <div class="py-5 ps-5 d-flex flex-column col-12 col-lg-6 text-lg-end">
-                    <h2 class="display-5 fw-bold mb-3">Marie Carlier</h2>
-                    <p class="d-block justify-content-center">
-                        3 Rue Jean Brunet,<br />
-                        92270, Bois-Colombes<br />
-                        France
-                    </p>
-                    <a class="fw-bolder" href="https://goo.gl/maps/5TM96mkmsDiF8isi7">Voir la carte</a>
-                </div>
-                <div class="vh-50 col-12 col-lg-6" id="brunch-map"></div>
-            </div>
+            {{/each}}
         </div>
     </section>
     <!-- / Image Hotspot Banner-->

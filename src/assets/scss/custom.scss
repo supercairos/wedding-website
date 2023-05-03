@@ -7,6 +7,22 @@
     stroke: $white;
 }
 
+.svg-paris {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    overflow: hidden;
+}
+
+.on_top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /*expand this div to the size of its parent*/
+}
+
 // .navbar-transparent:hover {
 //     .svg-logo-fill-color {
 //         fill: $blue;
@@ -47,10 +63,33 @@
 }
 
 @font-face {
-    font-family: 'goudy_regular';
+    font-family: 'GoudyOldStyle';
     src: url('../fonts/goudy_regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'GoudyOldStyle';
+    src: url('../fonts/goudy_bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GoudyOldStyle';
+    src: url('../fonts/goudy_italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
 /* Add your own custom CSS here... */
+.dotted:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 75px;
+    bottom: 0;
+    left: auto;
+    border-left: 3px dotted black;
+}

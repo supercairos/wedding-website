@@ -2,7 +2,7 @@
     {
         "id": "home",
         "href": "home.html",
-        "text": "Home"
+        "text": "Accueil"
     },
     {
         "id": "venue",
@@ -12,7 +12,7 @@
     {
         "id": "wishlist",
         "href": "wishlist.html",
-        "text": "La liste de mariage"
+        "text": "Notre liste de mariage"
     },
     {
         "id": "contact",
