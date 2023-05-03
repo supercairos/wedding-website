@@ -48,7 +48,7 @@
 
       .cls-6 {
         font-family: 'GoudyOldStyle';
-        font-size: 3.93px;
+        font-size: 3.5px;
         font-style: italic;
       }
     </style>
@@ -72,7 +72,7 @@
   <path class="cls-1" d="m179.3,54.99c.69,0,1.25-.56,1.25-1.25s-.56-1.25-1.25-1.25-1.25.56-1.25,1.25.56,1.25,1.25,1.25"/>
   <path class="cls-4" d="m7.28.1l3.03,6.5s-.08-3.54,3.47-3.47L7.28.1Z"/>
   <path class="cls-5" d="m168.59,78.22c.69,0,1.25-.56,1.25-1.25s-.56-1.25-1.25-1.25-1.25.56-1.25,1.25.56,1.25,1.25,1.25"/>
-  <text class="cls-6" transform="translate(150 79.04)"><tspan x="0" y="0">Eglise </tspan><tspan x="-14.17" y="5.92">Saint-Germain-des-Prés</tspan></text>
+  <text class="cls-6" transform="translate(150 79.04)"><tspan x="0" y="0">Eglise</tspan><tspan x="-14.17" y="5.92">Saint-Germain-des-Prés</tspan></text>
   <text class="cls-6" transform="translate(155.64 56.03)"><tspan x="0" y="0">Péniche</tspan><tspan x="-8.47" y="5.91">La Balle au Bond</tspan></text>
-  <text class="cls-6" transform="translate(13.87 10.14)"><tspan x="0" y="0">Bois Colombes, </tspan><tspan class="cls-2" x="-3.06" y="5.92">chez Marie Carlier</tspan></text>
+  <text class="cls-6" transform="translate(13.87 10.14)"><tspan x="0" y="0">Bois Colombes</tspan><tspan class="cls-2" x="-3.06" y="5.92">chez Marie Carlier</tspan></text>
 </svg>
