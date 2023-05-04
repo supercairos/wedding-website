@@ -22,7 +22,7 @@
         "time": "12h30",
         "subtitle": "Brunch",
         "address": "Chez Marie Carlier<br />3 Rue Jean Brunet<br />92270 Bois-Colombes<br />",
-        "picture": "",
+        "picture": "./assets/images/venues/boisco.jpg",
         "map_url": "https://goo.gl/maps/jyvq7JHXhc9jk3dF8",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
