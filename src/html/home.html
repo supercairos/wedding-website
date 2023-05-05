@@ -8,7 +8,7 @@
 
     <!-- Navbar -->
     <div class="position-relative z-index-30">
-        {{> navbar/navbar page="index" }}
+        {{> navbar/navbar page="home" }}
     </div>
     <!-- / Navbar-->
 
@@ -27,7 +27,7 @@
                     </h1>
                     <h2 class="display-5 px-2 px-md-5 text-center mx-auto" data-aos="fade-up" data-aos-delay="300">
                         07/10/2023<br />
-                        J&ndash;{{deadline "10/07/2023" }}
+                        <div id="deadline" data-date="10/07/2023"></div>
                     </h2>
                 </div>
             </div>
@@ -40,6 +40,8 @@
 
     <!-- Theme JS -->
     {{> footer/scripts }}
+    <!-- Wishlist JS -->
+    <script src="./assets/js/home.bundle.js"></script>
 </body>
 
 </html>

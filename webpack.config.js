@@ -44,6 +44,7 @@ const wPackConfig = {
     entry: {
         'libs': [paths.src.scss + '/libs.scss'],
         'theme': [paths.src.js + '/theme.js', paths.src.scss + '/theme.scss'],
+        'home': [paths.src.js + '/pages/home.js'],
         'wishlist': [paths.src.js + '/pages/wishlist.js'],
         'contact': [paths.src.js + '/pages/contact.js'],
         'password': [paths.src.js + '/pages/password.js'],
