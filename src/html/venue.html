@@ -33,9 +33,9 @@
                     <h2 class="display-6 mb-3">{{ this.title }}</h2>
                     <p class="d-block justify-content-center">{{{ this.address }}}</p>
                     <a class="fw-bolder" href={{ this.map_url }}>Voir la carte</a>
-                    <p class="d-block justify-content-center pt-3">{{{ this.description }}}</p>
+                    <p class="d-block justify-content-center pt-3" style="padding-left: 8.5rem!important;">{{{ this.description }}}</p>
                 </div>
-                <img class="ratio-4x3 col-12 col-lg-6 mb-8" src={{ this.picture }} data-zoomable />
+                <img class="ratio-4x3 col-12 col-lg-6 mb-8" src={{ this.picture }} />
             </div>
             {{/each}}
         </div>
