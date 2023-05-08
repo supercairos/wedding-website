@@ -1,5 +1,4 @@
 import Handlebar from 'handlebars';
-import Swiper from 'swiper';
 import PayPal from 'paypal';
 import Axios from 'axios';
 
@@ -15,12 +14,23 @@ import { BASE_URL } from '../constants';
             document.getElementById('item-card-template').innerHTML
         );
 
+        let launchFireworks = () => {
+            const fireworks = document.getElementById('fireworks');
+            fireworks.classList.add('active');
+            setTimeout(() => {
+                fireworks.classList.remove('active');
+            }, 5000);
+        }
+
         let onPaypalComplete = (item) => (params) => {
             console.log(params);
             const amount = parseFloat(params.amt);
 
             // Update the item
             item.raised += amount;
+            if (item.raised >= item.price) {
+                launchFireworks();
+            }
 
             // Update the UI
             const htmlItem = document.getElementById(`wishlist-item-${item.id}`);
@@ -68,12 +78,14 @@ import { BASE_URL } from '../constants';
                     div.id = `wishlist-item-${item.id}`;
                     div.innerHTML += html;
 
-                    if (typeof myVar === 'string' || myVar instanceof String) {
-                        // Create a div element
-                        if (soldout) {
-                            div.classList.add('item-sold-out');
-                        } else {
-                            div.addEventListener('click', onPaypalClick(item));
+                    if (typeof item.paypal_id === 'string' || item.paypal_id instanceof String) {
+                        if (item.paypal_id.length > 0) {
+                            // Create a div element
+                            if (soldout) {
+                                div.classList.add('item-sold-out');
+                            } else {
+                                div.addEventListener('click', onPaypalClick(item));
+                            }
                         }
                     }
 

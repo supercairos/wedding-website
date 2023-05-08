@@ -1,7 +1,7 @@
 <!-- Card Product-->
 <div class="card card-listing hover-trigger" data-id="\{{ id }}">
     <div class="card-header">
-        <picture class="overflow-hidden d-block bg-light" style="height: 280px">
+        <picture class="overflow-hidden d-block bg-light" >
             <img class="img-fluid w-100 h-100 z-index-10" title="" src="\{{ picture_url }}"
                 alt="{{config.defaultImgAlt}}">
         </picture>
@@ -12,9 +12,11 @@
         </picture>
         \{{/if}}
         \{{#unless soldout }}
+        \{{#if paypal_id }}
         <div class="card-actions">
             <span class="small text-uppercase tracking-wide fw-bolder text-center d-block">Participer</span>
         </div>
+        \{{/if}}
         \{{/unless}}
     </div>
     <div class="card-body px-0 text-center">
