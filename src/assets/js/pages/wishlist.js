@@ -1,3 +1,4 @@
+import { Fireworks } from 'fireworks-js'
 import Handlebar from 'handlebars';
 import PayPal from 'paypal';
 import Axios from 'axios';
@@ -15,11 +16,10 @@ import { BASE_URL } from '../constants';
         );
 
         let launchFireworks = () => {
-            const fireworks = document.getElementById('fireworks');
-            fireworks.classList.add('active');
-            setTimeout(() => {
-                fireworks.classList.remove('active');
-            }, 5000);
+            console.log('launching fireworks');
+            const element = document.getElementById('fireworks');
+            const fireworks = new Fireworks(element, {})
+            fireworks.start()
         }
 
         let onPaypalComplete = (item) => (params) => {
