@@ -5,9 +5,6 @@ import Axios from 'axios';
 
 import { BASE_URL } from '../constants';
 
-const PAYPAL_BUTTON_ID = 'SG6MGCRSJQ9CW';
-const PAYPAL_ENV = 'sandbox';
-
 (function () {
     // Add a body class once page has loaded
     // Used to add CSS transitions to elems
@@ -59,23 +56,26 @@ const PAYPAL_ENV = 'sandbox';
 
                 // Loop through the items
                 data.forEach((item) => {
-                    const soldout = item.raised >= item.price;
+                    const soldout = item.raised >= item.price && item.price > 0;
                     // Compile the template
                     const html = itemCardTemplate({
                         soldout,
                         ...item
                     });
 
-                    // Create a div element
                     var div = document.createElement('div');
-                    if (soldout) {
-                        div.classList.add('item-sold-out');
-                    } else {
-                        div.addEventListener('click', onPaypalClick(item));
-                    }
                     div.classList.add('col');
                     div.id = `wishlist-item-${item.id}`;
                     div.innerHTML += html;
+
+                    if (typeof myVar === 'string' || myVar instanceof String) {
+                        // Create a div element
+                        if (soldout) {
+                            div.classList.add('item-sold-out');
+                        } else {
+                            div.addEventListener('click', onPaypalClick(item));
+                        }
+                    }
 
                     // Append the div element to the wrapper
                     wishlistWrapper.appendChild(div);

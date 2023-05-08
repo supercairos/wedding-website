@@ -22,7 +22,7 @@
         \{{#if soldout }}
         <p class="fw-bolder m-0 mt-2">Déjà offert</p>
         \{{else}}
-        <p class="fw-bolder m-0 mt-2">\{{ raised }} / \{{ price }}€</p>
+        <p class="fw-bolder m-0 mt-2">\{{ raised }}\{{#if price}} / \{{ price }}\{{/if}}€</p>
         \{{/if}}
     </div>
 </div>
