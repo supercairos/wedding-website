@@ -1,15 +1,17 @@
 [
     {
         "title": "Eglise Saint-Germain-des-Prés",
+        "day": "Samedi",
         "time": "14h30",
         "subtitle": "Messe",
         "address": "3 Place Saint-Germain-des-Prés<br />75006 Paris<br />",
         "picture": "./assets/images/venues/saint_germain_des_pres.jpg",
         "map_url": "https://goo.gl/maps/YdaEJVNcrYhAL3Vt5",
-        "description":"Notre messe de mariage sera célébrée<br/>en l'église de Saint-Germain-des-Prés.<br />Vous pouvez vous y rendre en métro, l'arrêt<br />Saint-Germain-des-Prés dessert le parvis de l'église.<br />Si vous souhaitez venir en voiture, il y a un parking Indigo rue Jacob (Paris Saints-Pères)."
+        "description": "Notre messe de mariage sera célébrée<br/>en l'église de Saint-Germain-des-Prés.<br />Vous pouvez vous y rendre en métro, l'arrêt<br />Saint-Germain-des-Prés dessert le parvis de l'église.<br />Si vous souhaitez venir en voiture, il y a un parking Indigo rue Jacob (Paris Saints-Pères)."
     },
     {
         "title": "La Balle au Bond",
+        "day": "Samedi",
         "time": "17h30",
         "subtitle": "Cocktail",
         "address": "Promenade Marceline Loridan-Ivens<br />75006 Paris<br />",
@@ -19,6 +21,7 @@
     },
     {
         "title": "Bois-Colombes",
+        "day": "Dimanche",
         "time": "12h30",
         "subtitle": "Brunch",
         "address": "Chez Marie Carlier<br />3 Rue Jean Brunet<br />92270 Bois-Colombes<br />",
