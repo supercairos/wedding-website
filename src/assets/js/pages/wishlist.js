@@ -70,6 +70,7 @@ import { BASE_URL } from '../constants';
                     // Compile the template
                     const html = itemCardTemplate({
                         soldout,
+                        currency: item.name.includes("ethereum") ? 'Ξ' : '€',
                         ...item
                     });
 
