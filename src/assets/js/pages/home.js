@@ -14,7 +14,10 @@ const deadline = (date) => {
     window.addEventListener('load', () => {
         const items = document.querySelectorAll('[data-date]');
         items.forEach((item) => {
-            item.innerHTML = `J&ndash;${deadline(item.dataset.date)}`;
+            const deadline = deadline(item.dataset.date);
+            if (deadline > 0) {
+                item.innerHTML = `J&ndash;${deadline(item.dataset.date)}`;
+            }
         });
     });
 })();
